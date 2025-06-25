@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #2b5876, #4e4376);
+    color: white;
+    line-height: 1.5;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #ddd;
+}
+
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.contact-links a {
+    flex: 1 1 200px;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 1rem;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    transition: transform 0.3s, background 0.3s;
+    border: 1px solid #ffffff30;
+}
+
+.contact-links a:hover {
+    transform: scale(1.03);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+    padding: 2rem 1rem;
+    max-width: 1000px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.gallery img {
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out;
+    margin: 0 auto;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+.heaind {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.heaind img {
+    height: 10rem;
+}
+
+.heaind p {
+    font-size: 4rem;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+@media screen and (max-width: 700px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    header {
+        padding-top: 0;
+    }
+    .contact-links a {
+        flex: 1 1 100%;
+        font-size: 1rem;
+    }
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+    .heaind {
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 100%;
+    }
+    .heaind p {
+        margin-top: 2rem;
+        font-size: 3rem;
+        width: 100%;
+        text-align: center;
+    }
+}
